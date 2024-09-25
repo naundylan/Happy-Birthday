@@ -157,7 +157,20 @@ function scroll() {
             cake.style.transform = `scale(${1 + tmpCake/10000})`;
             cake.style.opacity = tmpCake/5000;
         }
-        console.log(value);
+
+        const scrollTop = document.documentElement.scrollTop;
+        
+        if (scrollTop >= 89300) {
+            console.log("sau 2 s");
+            
+            let button = document.querySelector(".button");
+            let popUp = document.querySelector(".popup");
+            button.style.display = "flex";
+            button.classList.add("opacity");
+            button.addEventListener("click", () => {
+                popUp.classList.remove("disabled");
+            })
+        }
 
         // backgr
         var candyWorld = document.getElementById("candyworld");
