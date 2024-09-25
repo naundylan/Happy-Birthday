@@ -1,0 +1,12 @@
+color: xanh rêu
+#FEB6B9, #FAE3D9, #BBDED6, #8BC6D0, #F6F6F2, #CBD5F0, #388087, #C2EDCE
+model yêu thích: loopy
+
+section:
+web sẽ đẩy lên vercel lấy link chuyển thành QR code
+khi mới vào, web sẽ hiện cửa sổ bìa lên màn hình
+mỗi section một page riêng
+- bìa (có ảnh)
+- lời chúc (làm rãi rác khi lướt) làm chung với minigame
+- bánh kem (scroll đến cuối)
+- gallery (đoạn giữa)

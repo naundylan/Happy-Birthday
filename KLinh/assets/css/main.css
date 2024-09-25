@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --darkgreen: rgb(2, 52, 63);
+    --skinyellow: #F0EDCC;
+
+    --lightpink: #FAD0C9;
+    /* --darkpink: #d5604b; */
+    --darkgray: #6E6E6D;
+}
+html {
+    height: 90000px;
+    font-family: "Itim", cursive;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+}
+*::selection {
+    background-color: var(--skinyellow);
+}
+
+
+/* bgr */
+.backgr {
+    background-color: #fefefe;
+    background-image: linear-gradient(0deg, #0f0d5a 0%,#a9325e 60%, #f7b613 75%, #00a4e4 100%);
+    height: 90000px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+/* welcome */
+.disabled {
+    display: none;
+}
+/* world */
+.world {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.world #star, .world #candyworld {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* star */
+#star {
+    animation: star 10s infinite;
+}
+@keyframes star {
+    0% {
+        left: 3000px;
+        top: -1000px;
+    }
+    100% {
+        left: -3000px;
+        top: 1000px;
+    }
+}
+
+/* mountain */
+.part {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.mountain-left {
+    position: fixed;
+    left: 350px;
+    bottom: -50px;
+}
+.mountain-right {
+    position: fixed;
+    right: 350px;
+    bottom: -50px;
+}
+
+/* fog */
+.fog-left {
+    position: fixed;
+    width: 200%;
+    left: -500px;
+    bottom: -300px;
+    height: 1400px;
+    
+}
+.fog-right {
+    position: fixed;
+    width: 200%;
+    right: -500px;
+    bottom: -320px;
+    height: 1400px;
+}
+
+/* bgr fog */
+#bgrfog {
+    bottom: 50px;
+    left: -320px;
+    width: 150%;
+    position: fixed;
+}
+
+
+/* start */
+.start {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+}
+.continue {
+    position: absolute;
+    bottom: 65px;
+    right: 40px;
+    z-index: 1;
+    color: white;
+}
+.start .inner-loopy {
+    position: absolute;
+    bottom: calc(50% - 75px);
+    width: 100%;
+    height: 150px;
+    background-color: var(--darkgray);
+    text-align: center;
+    border-radius: 30px;
+    border: 3px solid rgb(255, 128, 149);
+    padding: 0 100px;
+}
+.start .inner-capy {
+    position: absolute;
+    bottom: calc(50% - 75px);
+    width: 100%;
+    height: 150px;
+    background-color: var(--darkgreen);
+    text-align: center;
+    border-radius: 30px;
+    border: 3px solid rgb(255, 250, 105);
+    padding: 0 100px;
+}
+.start .inner-loopy .inner-model {
+    position: absolute;
+    bottom: 50px;
+    height: 100%;
+    width: 10%;
+}
+.start .inner-capy .inner-model {
+    position: absolute;
+    bottom: 7px;
+    right: 50px;
+    height: 100%;
+    width: 10%;
+}
+.start .inner-model img {
+    width: 100%;
+}
+.start .inner-loopy .inner-content {
+    width: 100%;
+    padding: 36px 200px;
+    font-size: 30px;
+    color: var(--lightpink);
+}
+.start .inner-capy .inner-content {
+    width: 100%;
+    padding: 36px 200px;
+    font-size: 30px;
+    color: var(--lightpink);
+}
+
+/* instruction */
+.instruction {
+    background-color: #42424277;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+.instruction .inner-wrap {
+    background-color: pink;
+    height: 600px;
+    width: 500px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+}
+.instruction .inner-main {
+    margin: 0 auto;
+    width: 400px;
+    height: 480px;
+    margin-top: 10px;
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.instruction .inner-main img {
+    height: 480px;
+    width: 400px;
+}
+.instruction .inner-main ul {
+    position: absolute;
+    right: -400px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px 10px 50px;
+    background-color: white;
+}
+.instruction .inner-main li {
+    font-size: 20px;
+    line-height: 30px;
+}
+.instruction .inner-main i:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+    color:#00a4e4;
+}
+.instruction .inner-main p {
+    display: flex;
+    justify-content: center;
+}
+.instruction .inner-main i {
+    font-size: 50px;
+}
+.instruction .inner-title {
+    text-align: center;
+    margin-top: 20px;
+}
+.instruction .inner-title > p {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.scale {
+    transform: scale(2);
+    transform: rotateY(0.5turn);
+    transition: 0.5s;
+}
+.scale-reverse {
+    transform: scale(1);
+    transition: 0.5s;
+}
+.translate {
+    transform: translateX(-400px);
+    transition: 0.25s;
+}
+.translate-reverse {
+    transform: translateX(40px);
+    transition: 0.25s;
+}
+.red {
+    color: #CC313D;
+}
+
+/* poster */
+.poster {
+    height: 100vh;
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: #39393960;
+    z-index: 100;
+    position: fixed;
+}
+.poster .inner-main {
+    position: relative;
+    height: 80%;
+    width: 60%;
+}
+.poster img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close:hover {
+    cursor: pointer;
+}
+.poster .inner-main div {
+    color: black;
+    font-family: "Playwrite CL", cursive;
+}
+.poster .inner-main .inner-title {
+    font-weight: 700;
+    font-size: 26px;
+    position: absolute;
+    top: 60%;
+    left: 50px;
+    transform: skewY(-10deg);
+}
+.poster .inner-main .inner-title2 {
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    top: 60%;
+    transform: skewY(10deg);
+    right: 50px;
+    text-align: center;
+}
+.poster .inner-main .inner-desc {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+
+/* animation */
+.topFade {
+    animation: topcenter 1s;
+}
+.opacity {
+    animation: opacity 1s;
+}
+.zoomout {
+    animation: scale-reverse 1s;
+}
+.move-around-left {
+    animation: move-around-left 20s infinite linear alternate;
+}
+.move-around-right {
+    animation: move-around-right 20s infinite linear alternate;
+}
+
+/* keyframe */
+@keyframes topcenter {
+    0% {
+        transform: translateY(-400px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes scale-reverse {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes move-around-left {
+    20% {
+        transform: translateY(20px);
+    }
+    40% {
+        transform: translateY(0);
+        transform: translateX(20px);
+    }
+    60% {
+        transform: translateX(-20px);
+    }
+    80% {
+        transform: translateY(-20px);
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes move-around-right {
+    20% {
+        transform: translateY(20px);
+    }
+    40% {
+        transform: translateY(0);
+        transform: translateX(-20px);
+    }
+    60% {
+        transform: translateX(20px);
+    }
+    80% {
+        transform: translateY(-20px);
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+/* game */
+.game {
+    background-image: url(../backgr-img/party.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1200px;
+    height: 500px;
+    z-index: 99;
+    overflow: hidden;
+    position: fixed;
+    left: calc(50% - 600px);
+    top: calc(50% - 250px);
+    border: 5px solid rgb(27, 133, 29);
+    border-radius: 10px;
+}
+.bubble {
+    position: absolute;
+    background-image: url(../backgr-img/baloon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.anima {
+    animation: anima 1.8s ease-in;
+}
+.score {
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 40px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
+@keyframes anima {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-600px);
+    }
+}
+
+/* memory */
+.memory {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width: 40%;
+    margin: 250px auto;
+    height: 190px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.memory .memory-img {
+    height: 100%;
+    width: 100%;
+}
+.memory .memory-text {
+    background-image: url(../backgr-img/backgr-quote.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+.memory-text .inner-text {
+    font-size: 20px;
+}
+.memory-text::before {
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.607);
+}
+.memory-text::after {
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.607);
+}
+
+/* quote */
+.quote .inner-text::before {
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.607);
+}
+.quote .inner-text::after {
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.607);
+}
+.quote {
+    display: flex;
+    width: 400px;
+    left: calc(50% - 200px);
+    height: 150px;
+    border-radius: 40px;
+    background-image: url(../backgr-img/quotebackgr.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: calc(50% - 75px);
+    text-align: center;
+}
+.quote .quote-wrap {
+    padding: 20px 50px;
+}
+
+/* cake */
+#cake {
+    height: 400px;
+    width: 700px;
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 350px);
+    display: none;
+    opacity: 0;
+}

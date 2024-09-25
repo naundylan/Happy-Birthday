@@ -1,0 +1,335 @@
+html {
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px black solid; */
+}
+body {
+    margin-top: 50px;
+    background-color: rgb(227, 227, 227);
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 80%;
+    position: relative;
+    border: #0062b1 5px solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.active-border {
+    border: 5px solid rgb(5, 255, 247);
+    transition: 0.15s;
+}
+
+/* header */
+
+.wrap-header {
+    height: 50px;
+    width: auto;
+    background-image: url(../images/images.jpg);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.title {
+    position: absolute;
+    background: linear-gradient(90deg, #0062b1, #66baff);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-clip: text;
+    color: transparent;
+    left: 15%;
+    margin-top: 10px;
+}
+
+/* center */
+
+.center {
+    height: 510px;
+    display: grid;
+    grid-template-columns: 15% 84%;
+    border: 5px rgb(0, 0, 0) solid;
+    gap: 1%;
+    background-color: black;
+}
+.con {
+    display: none;
+}
+#danhSach li{
+    list-style: none;
+    width: 100%;
+    padding: 34px 0;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#danhSach > div {
+    background-color: rgb(182, 228, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#danhSach {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.con{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
+#con1 > img {
+    height: 500px;
+    width: 100%;
+}
+#con2 {
+    background-image: url(../images/cute.jpg);
+    color: white;
+}
+#con2 > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#con2 fieldset {
+    border: #a9d8ff 5px solid;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+#con2 legend {
+    margin: 0px 0px 0px 50px;
+    padding: 5px 5px;
+    font-family: "Gwendolyn", cursive;
+    font-weight: 700;
+    font-size: 30px;
+}
+#con3 {
+    background-image: url(../images/blue-wallpaper-cute.jpg);
+}
+#con3 > .cake {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 402px;
+}
+.cake-title {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+.stick {
+    display: flex;
+    justify-content: space-evenly;
+}
+.wrap-fire {
+    display: block;
+    padding-top: 10px;
+}
+.fire {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.fire > .firee {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border: 3px #f7d643 solid;
+    position: relative;
+}
+.fire-center {
+    width: 16px;
+    /* height: 12px; */
+    background-color: rgb(255, 164, 6);
+    border: 3px #ff6518 solid;
+    position: absolute;
+    /* top: -8px; */
+    /* left: 0px; */
+}
+.fire-top {
+    width: 12px;
+    height: 3px;
+    /* height: 10px; */
+    background-color: rgb(255, 6, 6);
+    position: absolute;
+    /* top: -7px; */
+    /* left: 0px; */
+}
+.fire > .firee:hover {
+    height: 15px;
+    cursor:pointer;
+}
+.fire-center:hover {
+    height: 12px;
+    top: -8px;
+    cursor: pointer;
+}
+.fire-top:hover {
+    height: 10px;
+    top: -7px;
+    cursor: pointer;
+}
+.stick > div {
+    width: 5%;
+    height: 20px;
+    background-color: rgb(99, 86, 0);
+    border: 2px #866e00 solid;
+    margin: 0 2px;
+}
+.cake-top {
+    border: 3px solid #fdc0c7;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 90px;
+    width: 200px;
+    margin: 0 auto;
+    background-image: url(../images/cake-top.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cake-bottom {
+    height: 120px;
+    width: 300px;
+    border: 3px solid #fdc0c7;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-image: url(../images/cake-bottom.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.cake-bottom > p {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0062b1;
+    font-weight: bold;
+    margin: 30px 0;
+}
+#con4 {
+    background-image: url(../images/backgr4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#con4 > div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#con4 img {
+    height: 200px;
+    width: 200px;
+    margin: 10px 0;
+}
+#con4 fieldset {
+    border: #fdc0c7 5px solid;
+    border-radius: 10px;
+    width: 500px;
+    background-color: white;
+}
+#con4 p {
+    margin: 10px 0;
+}
+#con4 button {
+    border: 2px solid #32a3ff;
+    border-radius: 5px;
+    color: white;
+    background-color: #0062b1;
+}
+#con4 button:hover {
+    background-color: #0088f7;
+}
+#con4 input {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+#con5 > div {
+    display: grid;
+    grid-template-rows: 190px 120px 190px;
+    
+}
+
+.list-image {
+    width: 1015px; /* Chiều rộng của div chứa dãy ảnh */
+    height: 190px; /* Chiều cao của div chứa dãy ảnh */
+    overflow: hidden; /* Ẩn ảnh khi chúng vượt quá kích thước div */
+    position: relative; /* Cần thiết cho hiệu ứng animation */
+    background-color: #8e7a5a;
+    border-top: 20px black dashed;
+    border-bottom: 20px black dashed;
+}
+
+.images1 {
+    display: flex; /* Xếp các ảnh thành hàng */
+    animation: xlide 10s linear infinite; /* Tạo hiệu ứng animation */
+}
+
+.images2 {
+    display: flex; /* Xếp các ảnh thành hàng */
+    animation: ylide 10s linear infinite; /* Tạo hiệu ứng animation */
+}
+
+.images1 > img, .images2 > img {
+    width: 300px; /* Chiều rộng của ảnh bằng chiều rộng div */
+    height: 150px; /* Chiều cao tự động thay đổi theo tỷ lệ */
+    margin-right: 10px; /* Khoảng cách giữa các ảnh */  
+}
+
+@keyframes xlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes ylide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.end-title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+    width: 1015px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/rabbit.jpg);
+}
+.end-title p {
+    margin: 20px 0;
+    color: white;
+}
+.end-title-anima {
+    animation: Ylide 20s linear infinite;
+}
+@keyframes Ylide {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
